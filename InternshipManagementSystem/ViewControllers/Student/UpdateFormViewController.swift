@@ -75,56 +75,5 @@ class UpdateFormViewController: UIViewController{
     }
     
     
-    func validate() ->Bool {
-       
-       if(self.firstName.text!.isEmpty) {
-            showAlertAnyWhere(message: "Please enter first name.")
-           return false
-       }
-       
-       if(self.lastName.text!.isEmpty) {
-            showAlertAnyWhere(message: "Please enter last name.")
-           return false
-       }
-       
-       if(!CommonMethods.shared.isValidEmail(testStr: email.text!)) {
-            showAlertAnyWhere(message: "Please enter valid email.")
-           return false
-       }
-       
-       if(self.contact.text!.isEmpty) {
-            showAlertAnyWhere(message: "Please enter contact number.")
-           return false
-       }
-       
-       if(self.department.text!.isEmpty) {
-            showAlertAnyWhere(message: "Please enter department.")
-           return false
-       }
-       
-       if(self.company.text!.isEmpty) {
-            showAlertAnyWhere(message: "Please enter company.")
-           return false
-       }
-       
-       if(self.location.text!.isEmpty) {
-            showAlertAnyWhere(message: "Please enter location.")
-           return false
-       }
-       
-       if(!CommonMethods.shared.isValidEmail(testStr: pocEmail.text!)) {
-            showAlertAnyWhere(message: "Please enter valid email.")
-           return false
-       }
-       
-       if(self.pocContact.text!.isEmpty) {
-            showAlertAnyWhere(message: "Please enter POC contact.")
-           return false
-       }
-       
-       
-       return true
-   }
-   
-   
+      
 }
