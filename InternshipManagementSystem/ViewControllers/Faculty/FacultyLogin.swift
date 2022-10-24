@@ -13,7 +13,7 @@ class FacultyLogin: UIViewController {
     @IBAction func onLogin(_ sender: Any) {
         
         if(!CommonMethods.shared.isValidEmail(testStr: email.text!)) {
-             showAlertAnyWhere(message: "Please enter valid email.")
+             showAlertAnyWhere(message: "Please enter valid email address.")
             return
         }
         
