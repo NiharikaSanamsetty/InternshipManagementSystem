@@ -236,30 +236,6 @@ extension FireStoreManager {
     }
     
     
-    func searchApplicationStatusByCompanyName(companyName:String,completionHandler:@escaping (QuerySnapshot) -> Void){
-        
-        let dbRef = db.collection("StudentApplicationForms")
-        
-        dbRef.whereField("company", isEqualTo: companyName.lowercased()).getDocuments { querySnapshot, err in
-            
-            if let err = err {
-                
-                showAlertAnyWhere(message: "Error getting documents: \(err)")
-                            return
-            }else {
-                
-                if let querySnapshot = querySnapshot {
-                    return completionHandler(querySnapshot)
-                }else {
-                    showAlertAnyWhere(message: "Something went wrong!!")
-                }
-               
-            }
-        }
-        
-       
-    }
-    
     
     func getQueryFromFirestore(field:String,compareValue:String,completionHandler:@escaping (QuerySnapshot) -> Void){
         
@@ -424,7 +400,7 @@ class FirFile: NSObject {
                let attachment =  attachments[index]
                var data = Data()
                var type = ""
-               let fileName =  attachment.uploadFile.name ?? "NA"
+               let fileName =  attachment.uploadFile.name ?? "N A"
              
              
              if let pdf = attachment.pdf {
@@ -440,7 +416,7 @@ class FirFile: NSObject {
              }
              
              FirFile.shared.upload(type: type, data: data, withName: fileName, block: { (error) in
-                  /// After successfully uploading call this method again by increment the **index = index + 1**
+                  /// After successfully uploading call this method again by increment the **index = index - 1**
                   
                   if let error = error {
                       print(error)
