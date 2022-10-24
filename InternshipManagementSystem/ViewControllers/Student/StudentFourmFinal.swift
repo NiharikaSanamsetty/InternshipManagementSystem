@@ -191,36 +191,7 @@ extension StudentFourmFinal : UICollectionViewDelegate , UICollectionViewDataSou
         vc.modalPresentationStyle = .overCurrentContext
         self.navigationController?.present(vc, animated: false, completion: nil)
     }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-         
-        let attachment = self.attchmentDocs[indexPath.row]
-        
-        var cell = UICollectionViewCell()
-        
-        cell.clipsToBounds = true
-    
-        
-        if let customCell = collectionView.dequeueReusableCell(withReuseIdentifier: ImagePdfCell.idenifier, for: indexPath) as? ImagePdfCell {
-            customCell.setData(attchment: attachment,frame:self.collectionView.frame)
-            customCell.pdfView.clipsToBounds = true
-            customCell.container.clipsToBounds = true
-            customCell.attachmentImage.clipsToBounds = true
-            customCell.attachmentImage.contentMode = .scaleAspectFill
-            customCell.deleteButton.tag = indexPath.row
-            customCell.container.backgroundColor = .white
-            customCell.deleteButton.isHidden = false
-            customCell.pdfView.isUserInteractionEnabled = false
-            customCell.deleteButton.addTarget(self, action: #selector(deleteAttachment(_:)), for: .touchUpInside)
-            customCell.clipsToBounds = true
-    
-            cell = customCell
-        }
-        
-      
-    
-         return cell
-    }
-    
+       
     
     @objc func deleteAttachment(_ sender: UIButton) {
         self.attachmentsArray.remove(at: sender.tag)
