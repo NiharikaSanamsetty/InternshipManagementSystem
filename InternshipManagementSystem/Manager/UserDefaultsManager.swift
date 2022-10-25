@@ -14,7 +14,7 @@ class UserDefaultsManager  {
 
             dictionary.keys.forEach
             {
-                key in defaults.removeObject(forKey: key)
+                key in   defaults.removeObject(forKey: key)
             }
     }
     

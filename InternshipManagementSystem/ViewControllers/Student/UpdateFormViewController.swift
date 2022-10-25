@@ -74,7 +74,8 @@ class UpdateFormViewController: UIViewController{
        
     }
     
-     func validate() ->Bool {
+    
+    func validate() ->Bool {
        
        if(self.firstName.text!.isEmpty) {
             showAlertAnyWhere(message: "Please enter first name.")
@@ -125,6 +126,5 @@ class UpdateFormViewController: UIViewController{
        return true
    }
    
-
-      
+   
 }
