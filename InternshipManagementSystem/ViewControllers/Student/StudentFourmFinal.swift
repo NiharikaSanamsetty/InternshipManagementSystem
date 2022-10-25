@@ -36,13 +36,15 @@ class StudentFourmFinal: UIViewController {
         
 
     }
+
+//Uploading a document
     
     @IBAction func onUpload(_ sender: UIButton) {
         self.view.endEditing(true)
         self.imagePicker.present(from: sender)
     }
     
-   
+   //Submitting the Forum which consists of Internship details.
     @IBAction func onSubmit(_ sender: Any) {
         
         
@@ -147,7 +149,7 @@ struct AttachmentArray {
     let pdf: PDFDocument?
 }
 
-
+//File Formats
 enum StudyMaterialType :String, Codable{
 
    case PDF,
@@ -191,7 +193,7 @@ extension StudentFourmFinal : UICollectionViewDelegate , UICollectionViewDataSou
         vc.modalPresentationStyle = .overCurrentContext
         self.navigationController?.present(vc, animated: false, completion: nil)
     }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
          
         let attachment = self.attchmentDocs[indexPath.row]
         
@@ -219,8 +221,7 @@ extension StudentFourmFinal : UICollectionViewDelegate , UICollectionViewDataSou
       
     
          return cell
-    }
-    
+    }    
     
     @objc func deleteAttachment(_ sender: UIButton) {
         self.attachmentsArray.remove(at: sender.tag)

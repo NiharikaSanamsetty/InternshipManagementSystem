@@ -61,11 +61,12 @@ class FireStoreManager {
             try! dbRef.setData(from:data) { error in
                  
                 if let _ = error {
-                    showAlertAnyWhere(message: "There is something Wrong")
-                }else {
                     studentApplicationStatusVC.querySnapshot.removeAll()
                     studentApplicationStatusVC.tableView.reloadData()
-                    showAlertAnyWhere(message: "Application Updated")
+                    showAlertAnyWhere(message: "There is something Wrong")
+                }else {
+               
+                    showAlertAnyWhere(message: "Application data is Updated")
                 }
                 
             }
@@ -221,7 +222,7 @@ extension FireStoreManager {
                 }else {
                     
                     print("Error NO DATA")
-                    showAlertAnyWhere(message: "Application ID Not Exist!!")
+                    showAlertAnyWhere(message: "Application ID Does Not Exist!!")
                     return
                 }
                 
@@ -234,7 +235,6 @@ extension FireStoreManager {
 
 
     }
-    
     
     func searchApplicationStatusByCompanyName(companyName:String,completionHandler:@escaping (QuerySnapshot) -> Void){
         
@@ -259,7 +259,6 @@ extension FireStoreManager {
         
        
     }
-    
     
     func getQueryFromFirestore(field:String,compareValue:String,completionHandler:@escaping (QuerySnapshot) -> Void){
         
@@ -287,9 +286,7 @@ extension FireStoreManager {
 
 extension FireStoreManager  {
     
- 
-    
-    func submitStudentApplication(studentFormData: StudentFormData, attchmentDocs: [AttachmentArray] , completion: @escaping (Bool)->()) {
+  func submitStudentApplication(studentFormData: StudentFormData, attchmentDocs: [AttachmentArray] , completion: @escaping (Bool)->()) {
         
        
      
@@ -326,6 +323,8 @@ extension FireStoreManager  {
         
         
     }
+    
+   
     
     
     func uploadFiles(classroomId:String,attachments: [AttachmentArray] , completion: @escaping (Bool)->()) {

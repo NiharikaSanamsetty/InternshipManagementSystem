@@ -13,7 +13,7 @@ class FacultyLogin: UIViewController {
     @IBAction func onLogin(_ sender: Any) {
         
         if(!CommonMethods.shared.isValidEmail(testStr: email.text!)) {
-             showAlertAnyWhere(message: "Please enter valid email.")
+             showAlertAnyWhere (message: "Please enter an valid email address.")
             return
         }
         
@@ -23,12 +23,12 @@ class FacultyLogin: UIViewController {
             return
         }
         
-        FireStoreManager.shared.login(email: email.text!.lowercased(), password: password.text!, userType: "faculty")
+        FireStoreManager.shared.login(email: email.text!.lowercased( ), password: password.text!, userType: "faculty")
     }
     
      
     
-    @IBAction func onForgotPassword(_ sender: Any) {
+    @IBAction func onForgotPassword( _ sender: Any) {
         
     }
    
