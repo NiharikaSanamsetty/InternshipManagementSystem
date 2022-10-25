@@ -61,11 +61,12 @@ class FireStoreManager {
             try! dbRef.setData(from:data) { error in
                  
                 if let _ = error {
-                    showAlertAnyWhere(message: "There is something Wrong")
-                }else {
                     studentApplicationStatusVC.querySnapshot.removeAll()
                     studentApplicationStatusVC.tableView.reloadData()
-                    showAlertAnyWhere(message: "Application Updated")
+                    showAlertAnyWhere(message: "There is something Wrong")
+                }else {
+               
+                    showAlertAnyWhere(message: "Application data is Updated")
                 }
                 
             }
