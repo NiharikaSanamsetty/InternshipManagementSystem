@@ -2776,10 +2776,10 @@
                                     </collectionView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lKE-XH-Vc5">
                                         <rect key="frame" x="10" y="355" width="40" height="37.5"/>
-                                        <constraints>
+                                        <constraints >
                                             <constraint firstAttribute="width" constant="40" id="lTL-4c-OnN"/>
                                             <constraint firstAttribute="height" constant="40" id="s4l-z2-sXw"/>
-                                        </constraints>
+                                        </constraints >
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" backgroundImage="arrowshape.turn.up.backward.fill" catalog="system"/>
                                         <connections>
