@@ -2856,7 +2856,7 @@
         <segue reference="H3b-RV-XlO"/>
         <segue reference="21o-JZ-MZK"/>
     </inferredMetricsTieBreakers>
-    <resources>
+    <resources >
         <image name="arrowshape.turn.up.backward.fill" catalog="system" width="128" height="106"/>
         <image name="arrowshape.turn.up.right.fill" catalog="system" width="128" height="106"/>
         <image name="copy2" width="100" height="100"/>
@@ -2869,5 +2869,5 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom"     customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-    </resources>	
+    </resources >	
 </document>
