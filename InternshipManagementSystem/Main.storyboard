@@ -2842,7 +2842,7 @@
                     </view>
                     <connections>
                         <outlet property="dataCollectionView" destination="a4v-hj-SZB" id="wWp-HF-vVn"/>
-                       
+                        <outlet property="nextButton" destination="ers-1Y-xv4" id="mqa-3s-yxK"/>
                         <outlet property="onDownload" destination="fJS-BZ-QUr" id="de0-Ec-Z9L"/>
                         <outlet property="previousButton" destination="lKE-XH-Vc5" id="8Jp-n8-yLc"/>
                     </connections>
