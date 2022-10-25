@@ -36,13 +36,15 @@ class StudentFourmFinal: UIViewController {
         
 
     }
+
+//Uploading a document
     
     @IBAction func onUpload(_ sender: UIButton) {
         self.view.endEditing(true)
         self.imagePicker.present(from: sender)
     }
     
-   
+   //Submitting the Forum which consists of Internship details.
     @IBAction func onSubmit(_ sender: Any) {
         
         
@@ -147,7 +149,7 @@ struct AttachmentArray {
     let pdf: PDFDocument?
 }
 
-
+//File Formats
 enum StudyMaterialType :String, Codable{
 
    case PDF,

@@ -22,7 +22,7 @@ class FacultyRegister: UIViewController {
     @IBAction func registerClick(_ sender: UIButton) {
         
         
-        if(self.validate()) {
+        if(self.validate( )) {
             
             FireStoreManager.shared.signUp(firstName: firstName.text!, lastName: lastName.text!, email: email.text!.lowercased(), contact: contact.text!, department: department.text!, password: password.text!, userType: "faculty")
         }
@@ -44,7 +44,7 @@ class FacultyRegister: UIViewController {
         }
         
         if(!CommonMethods.shared.isValidEmail(testStr:  email.text!)) {
-             showAlertAnyWhere(message: "Please enter valid Email.")
+             showAlertAnyWhere(message: "Please enter a valid Email.")
             return false
         }
         
