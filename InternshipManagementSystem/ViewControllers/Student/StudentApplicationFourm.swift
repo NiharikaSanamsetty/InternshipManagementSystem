@@ -21,6 +21,8 @@ class StudentFourmFirst: UIViewController{
         self.lastName.text! = "KUrmi"
         self.email.text! = UserDefaultsManager.shared.getEmail()
     }
+
+//Checks for Validations as soon clicking next
     @IBAction func onNext(_ sender: Any) {
         
         let dictonary =  ["firstName" : firstName.text! , "lastName" : lastName.text!, "contact" : contact.text!, "email" : email.text!,"department" : department.text!]
