@@ -286,7 +286,43 @@ extension FireStoreManager {
 
 extension FireStoreManager  {
     
- 
+  func submitStudentApplication(studentFormData: StudentFormData, attchmentDocs: [AttachmentArray] , completion: @escaping (Bool)->()) {
+        
+       
+     
+            let dbRef = db.collection("StudentApplicationForms").document()
+            typealias FileCompletionBlock = () -> Void
+            let documentID = dbRef.documentID
+            var newStudentFormData = studentFormData
+            newStudentFormData.id = documentID
+       
+    
+            
+        
+              self.uploadFiles(classroomId: UserDefaultsManager.shared.getEmail(), attachments: attchmentDocs) { success in
+                
+                  
+                  completion(true)
+                  
+                  do {
+                     try dbRef.setData(from: newStudentFormData) { error in
+                                      completion(true)
+                                  }
+                    } catch let error {
+                                  print("Error writing Study Material Topic to Firestore: \(error)")
+                        completion(false )
+                }
+
+                  
+                  
+                  
+               
+                
+            }
+         
+        
+        
+    }
     
    
     
