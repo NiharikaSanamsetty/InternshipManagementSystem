@@ -1,1 +1,1 @@
-This is Internship Management System
+iOS application for Internship Management System.
