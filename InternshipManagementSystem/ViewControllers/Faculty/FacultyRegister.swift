@@ -26,23 +26,24 @@ class FacultyRegister: UIViewController {
             
             FireStoreManager.shared.signUp(firstName: firstName.text!, lastName: lastName.text!, email: email.text!.lowercased(), contact: contact.text!, department: department.text!, password: password.text!, userType: "faculty")
         }
-        
+    
+    
        
     }
     
-    func validate() ->Bool {
+    func validate( ) ->Bool {
         
         if(self.firstName.text!.isEmpty) {
              showAlertAnyWhere(message: "Please enter first name.")
             return false
         }
         
-        if(self.lastName.text!.isEmpty) {
+        if(self.lastName.text!.isEmpty ) {
              showAlertAnyWhere(message: "Please enter last name.")
             return false
         }
         
-        if(!CommonMethods.shared.isValidEmail(testStr: email.text!)) {
+        if(!CommonMethods.shared.isValidEmail(testStr:  email.text!)) {
              showAlertAnyWhere(message: "Please enter valid Email.")
             return false
         }
@@ -69,7 +70,7 @@ class FacultyRegister: UIViewController {
         
         if(self.password.text!.count < 5 || self.password.text!.count > 10 ) {
             
-             showAlertAnyWhere(message: "Password  length shoud be 5 to 10")
+             showAlertAnyWhere (message: "Password  length shoud be 5 to 10")
             return false
         }
         
