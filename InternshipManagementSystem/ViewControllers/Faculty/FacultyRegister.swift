@@ -24,7 +24,7 @@ class FacultyRegister: UIViewController {
         
         if(self.validate( )) {
             
-            FireStoreManager.shared.signUp(firstName: firstName.text!, lastName: lastName.text!, email: email.text!.lowercased(), contact: contact.text!, department: department.text!, password: , userType: "faculty")
+            FireStoreManager.shared.signUp(firstName: firstName.text!, lastName: lastName.text!, email: email.text!.lowercased(), contact: contact.text!, department: department.text!, password: password.text!, userType: "faculty")
         }
     
     
