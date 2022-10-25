@@ -412,7 +412,7 @@ class FirFile: NSObject {
             return;
          }
 
-         block = completion
+         
          uploadImageOrPdf(forIndex: 0)
     }
 
