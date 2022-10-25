@@ -25,7 +25,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="Zed-Yl-iU1">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="185"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="14X-qL-Stk">
+                                            <stackView opaque="NO" contentMode = "scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="14X-qL-Stk">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IwN-Iz-aLd">
@@ -34,7 +34,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16g-bd-h6E">
+                                                    <textField opaque =  "NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16g-bd-h6E">
                                                         <rect key="frame" x="125" y="0.0" width="170" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="170" id="nrQ-IM-QmJ"/>
@@ -45,7 +45,7 @@
                                                     </textField>
                                                 </subviews>
                                             </stackView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="AIj-9F-eBD">
+                                            <stackView opaque = "NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="AIj-9F-eBD">
                                                 <rect key="frame" x="0.0" y="77" width="295" height="34"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ucF-gl-24A">
@@ -151,7 +151,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="ODL-nx-873">
                                                 <rect key="frame" x="0.0" y="0.0" width="295" height="34"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndu-11-cCu">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority = "251" text="Email:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndu-11-cCu">
                                                         <rect key="frame" x="0.0" y="0.0" width="106" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -163,7 +163,7 @@
                                                             <constraint firstAttribute="height" constant="34" id="OYV-bN-lOw"/>
                                                             <constraint firstAttribute="width" constant="170" id="lqh-9Y-n2u"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key = "fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -224,7 +224,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACS-K3-4VP">
                                                 <rect key="frame" x="0.0" y="0.0" width="105" height="31"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="31" id="I2D-H1-PkR"/>
+                                                    <constraint firstAttribute = "height" constant="31" id="I2D-H1-PkR"/>
                                                     <constraint firstAttribute="width" constant="105" id="aBm-zz-sHq"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
