@@ -20,7 +20,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="273" translatesAutoresizingMaskIntoConstraints="NO" id="DQ0-dJ-Bez">
-                                <rect key = "frame" x = "59.5" y = "203.5" width = "295" height = "489"/>
+                                <rect key="frame" x="59.5" y="203.5" width="295" height="489"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="43" translatesAutoresizingMaskIntoConstraints="NO" id="Zed-Yl-iU1">
                                         <rect key="frame" x="0.0" y="0.0" width="295" height="185"/>
@@ -34,7 +34,7 @@
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <textField opaque =  "NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16g-bd-h6E">
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="16g-bd-h6E">
                                                         <rect key="frame" x="125" y="0.0" width="170" height="34"/>
                                                         <constraints>
                                                             <constraint firstAttribute="width" constant="170" id="nrQ-IM-QmJ"/>
@@ -163,7 +163,7 @@
                                                             <constraint firstAttribute="height" constant="34" id="OYV-bN-lOw"/>
                                                             <constraint firstAttribute="width" constant="170" id="lqh-9Y-n2u"/>
                                                         </constraints>
-                                                        <fontDescription key = "fontDescription" type="system" pointSize="14"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
@@ -224,7 +224,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ACS-K3-4VP">
                                                 <rect key="frame" x="0.0" y="0.0" width="105" height="31"/>
                                                 <constraints>
-                                                    <constraint firstAttribute = "height" constant="31" id="I2D-H1-PkR"/>
+                                                    <constraint firstAttribute="height" constant="31" id="I2D-H1-PkR"/>
                                                     <constraint firstAttribute="width" constant="105" id="aBm-zz-sHq"/>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
@@ -259,7 +259,7 @@
             </objects>
             <point key="canvasLocation" x="-223" y="-68"/>
         </scene>
-        <!--Admin Dashboard-->
+        <!---Admin Dashboard--->
         <scene sceneID="tol-yI-UGh">
             <objects>
                 <viewController storyboardIdentifier="AdminDashboard" title="Admin Dashboard" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Bf0-dE-unw" customClass="AdminDashboard" customModule="InternshipManagementSystem" customModuleProvider="target" sceneMemberID="viewController">
