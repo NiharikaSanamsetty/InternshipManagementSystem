@@ -35,6 +35,11 @@ class ApplicationStatusCell: UITableViewCell {
         if(data.status == "Rejected") {
             self.status.textColor = .red
         }
+
+	if(data.status == "Pending") {
+            self.status.textColor = .blue
+        }
+ 
         
         
         if  attchmentButton != nil {
