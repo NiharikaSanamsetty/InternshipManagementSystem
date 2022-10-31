@@ -28,7 +28,9 @@ class FacultyLogin: UIViewController {
     
      
     
-    
+    @IBAction func onForgotPassword(_ sender: Any) {
+        
+    }
    
     
 
