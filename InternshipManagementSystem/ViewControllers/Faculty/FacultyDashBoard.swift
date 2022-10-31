@@ -38,13 +38,7 @@ class FacultyDashBoard: UIViewController , UITableViewDelegate , UITableViewData
 
     
     
-    @IBAction func onLogOut(_ sender: Any) {
-        
-        UserDefaultsManager.shared.clearUserDefaults()
-        
-        SceneDelegate.shared?.checkLogin()
-        
-    }
+    
 
   
 
