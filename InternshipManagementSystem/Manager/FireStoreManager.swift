@@ -51,7 +51,12 @@ class FireStoreManager {
           }
 
     }
-    
+    func changeStatusOfApplication(reason:String = "",id:String,status:String,completionHandler:@escaping () -> Void){
+        
+            db.collection("StudentApplicationForms").document(id).updateData(["status" : status , "reason" : reason]) { err in
+                return completionHandler()
+            }
+        }
     func updateData(documentId:String,data:StudentFormData) {
         
         let dbRef = db.collection("StudentApplicationForms").document(documentId)
