@@ -112,7 +112,7 @@ extension UIApplication {
 
 func getTodayDate()->String {
     let dateFormatter = DateFormatter()
-    dateFormatter.dateFormat = "MMMM dd YYYY"
+    dateFormatter.dateFormat = "MMMM d YYYY"
     return dateFormatter.string(from: Date())
 }
 
