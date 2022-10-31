@@ -37,10 +37,7 @@ class FacultyRegister: UIViewController {
             return false
         }
         
-        if(self.lastName.text!.isEmpty) {
-             showAlertAnyWhere(message: "Please enter last name.")
-            return false
-        }
+        
         
         if(!CommonMethods.shared.isValidEmail(testStr: email.text!)) {
              showAlertAnyWhere(message: "Please enter valid email.")
