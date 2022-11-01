@@ -121,7 +121,7 @@ class FacultyDashBoard: UIViewController , UITableViewDelegate , UITableViewData
       
       let dialog = SelectionDialog(title: "Please Select Status", closeButtonTitle: "Close")
       
-      dialog.addItem(item: "Pending", icon: UIImage(named: "pending")!) {
+      dialog.addItem(item: "Pending", icon: UIImage(named: "Pending")!) {
            
           dialog.close()
           
@@ -130,7 +130,7 @@ class FacultyDashBoard: UIViewController , UITableViewDelegate , UITableViewData
           })
       }
       
-      dialog.addItem(item: "Approved", icon: UIImage(named: "approved")!) {
+      dialog.addItem(item: "Approved", icon: UIImage(named: "Approved")!) {
          
           dialog.close()
           
@@ -311,16 +311,16 @@ extension FacultyDashBoard {
     
     @IBAction func onFilter(_ sender: Any) {
         
-        let dialog = SelectionDialog(title: "Please Select Status", closeButtonTitle: "Close")
+        let dialog = SelectionDialog (title: "Please Select Status", closeButtonTitle: "Close")
         
-        dialog.addItem(item: "Pending", icon: UIImage(named: "pending")!) {
+        dialog.addItem(item: "Pending", icon: UIImage(named: "Pending")!) {
              
             dialog.close()
             self.searchByStatus(status: "Pending")
             
         }
         
-        dialog.addItem(item: "Approved", icon: UIImage(named: "approved")!) {
+        dialog.addItem(item: "Approved", icon: UIImage(named: "Approved")!) {
            
             dialog.close()
             self.searchByStatus(status: "Approved")
@@ -329,7 +329,7 @@ extension FacultyDashBoard {
         }
         
         
-        dialog.addItem(item: "Rejected", icon: UIImage(named: "rejected")!) {
+        dialog.addItem(item: "Rejected", icon: UIImage(named: "Rejected")!) {
             
             dialog.close()
             self.searchByStatus(status: "Rejected")
@@ -341,7 +341,7 @@ extension FacultyDashBoard {
            
             dialog.close()
             
-            self.filterSnapShot = self.tempSnapshot
+            self.filterSnapShot =  self.tempSnapshot
             self.tableView.reloadData()
            
         }
