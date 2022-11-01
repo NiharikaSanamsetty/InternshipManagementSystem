@@ -204,8 +204,8 @@ class FacultyDashBoard: UIViewController , UITableViewDelegate , UITableViewData
                   
                   print(itemsArray.count)
                
-              }catch let error {
-                  print(error)
+
+             
               }
           }
           
