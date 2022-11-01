@@ -142,7 +142,7 @@ class FacultyDashBoard: UIViewController , UITableViewDelegate , UITableViewData
          
       }
       
-      dialog.addItem(item: "Rejected", icon: UIImage(named: "rejected")!) {
+      dialog.addItem(item: "Rejected", icon: UIImage(named: "Rejected")!) {
           
           dialog.close()
           
@@ -205,7 +205,8 @@ class FacultyDashBoard: UIViewController , UITableViewDelegate , UITableViewData
                   print(itemsArray.count)
                
 
-             
+              }catch let error {
+                  print(error)
               }
           }
           
