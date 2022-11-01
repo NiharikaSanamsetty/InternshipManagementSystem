@@ -259,8 +259,8 @@ extension UIViewController {
     
     func showInputDialog(title:String? = nil,
                          subtitle:String? = nil,
-                         actionTitle:String? = "Add",
-                         cancelTitle:String? = "Cancel",
+                         actionTitle:String? =  "Add",
+                         cancelTitle:String? =  "Cancel",
                          inputPlaceholder:String? = nil,
                          inputKeyboardType:UIKeyboardType = UIKeyboardType.default,
                          cancelHandler: ((UIAlertAction) -> Swift.Void)? = nil,
