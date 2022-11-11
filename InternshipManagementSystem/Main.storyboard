@@ -89,7 +89,7 @@
                                                             <segue destination="un9-D6-9rq" kind="show" id="1rc-gC-3iK"/>
                                                         < /connections >
                                                     </button >
-                                                </subviews>
+                                                </subviews >
                                             </stackView>
                                         </subviews>
                                     </stackView>
