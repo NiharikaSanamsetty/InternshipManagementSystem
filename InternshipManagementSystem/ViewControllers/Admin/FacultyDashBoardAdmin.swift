@@ -308,7 +308,39 @@ extension FacultyDashBoardAdmin {
        
    }
    
-   
+    func getApplications() {
+
+     self.tempSnapshot.remove()
+
+     
+       FireStoreManager.shared.getAllApplications() { querySnapshot in
+
+         
+         var itemsArray = [StudentFormData]()
+         
+         for (_,document) in querySnapshot.documents.enumerated() {
+             do {
+                 
+                 print(itemsArray.count)
+              
+             }catch let error {
+                 print(error)
+             }
+         }
+         
+         
+         self.tempSnapshot = itemsArray
+         self.filterSnapShot = itemsArray
+         self.tableView.reloadData()
+     
+      
+
+     }
+}
+
+
+}
+
    func sendRejectedEmail(toEmail:String,toName:String) {
        
        let subject = "Application Approved"
