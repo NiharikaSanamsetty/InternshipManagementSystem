@@ -87,8 +87,8 @@
                                                         </buttonConfiguration>
                                                         <connections>
                                                             <segue destination="un9-D6-9rq" kind="show" id="1rc-gC-3iK"/>
-                                                        </connections>
-                                                    </button>
+                                                        < /connections >
+                                                    </button >
                                                 </subviews>
                                             </stackView>
                                         </subviews>
