@@ -63,7 +63,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
-                                            </stackView>
+                                            </stackView >
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Uw8-AT-tG8">
                                                 <rect key="frame" x="0.0" y="154" width="295" height="31"/>
                                                 <subviews>
@@ -95,7 +95,7 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vgp-Gc-YOd">
                                         <rect key="frame" x="95" y="458" width="105" height="31"/>
-                                        <subviews>
+                                        <subviews >
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhP-dE-Wil">
                                                 <rect key="frame" x="0.0" y="0.0" width="105" height="31"/>
                                                 <constraints>
@@ -114,17 +114,22 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                            </stackView>
+                            </stackView> 
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XXm-5b-IVa"/>
                         <color key="backgroundColor" red="0.44313725490196076" green="0.67450980392156867" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
+                        <constraints> 
                             <constraint firstItem="DQ0-dJ-Bez" firstAttribute="centerY" secondItem="9k2-HX-amn" secondAttribute="centerY" id="66c-lf-MAp"/>
                             <constraint firstItem="DQ0-dJ-Bez" firstAttribute="centerX" secondItem="9k2-HX-amn" secondAttribute="centerX" id="6Tz-yz-GPg"/>
+<<<<<<< HEAD
+                        </constraints >
+                    < /view >
+=======
                         </constraints>
-                    </view>
+                    </view> 
+>>>>>>> 52cc62c057373fab3ecce5a97c93b787eb9dc6dd
                     <navigationItem key="navigationItem" title="Student" id="GHG-jL-VdP"/>
-                    <connections>
+                    <connections> 
                         <outlet property="email" destination="16g-bd-h6E" id="qR5-xU-lRf"/>
                         <outlet property="password" destination="Xic-Cg-y6b" id="1ad-pI-Boi"/>
                     </connections>
@@ -135,7 +140,7 @@
         </scene>
         <!--Admin-->
         <scene sceneID="adw-9e-Ge5">
-            <objects>
+            <objects> 
                 <viewController storyboardIdentifier="AdminLogin" title="Admin" id="sNd-OE-PVL" customClass="AdminLogin" customModule="InternshipManagementSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D0m-Pp-ist">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -166,7 +171,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
-                                            </stackView>
+                                            </stackView> 
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="x2K-Eb-PRU">
                                                 <rect key="frame" x="0.0" y="77" width="295" height="34"/>
                                                 <subviews>
@@ -175,7 +180,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
-                                                    </label>
+                                                    </label> 
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="snc-Dc-p6n">
                                                         <rect key="frame" x="125" y="0.0" width="170" height="34"/>
                                                         <constraints>
@@ -200,7 +205,7 @@
                                                         <connections>
                                                             <action selector="onLogin:" destination="sNd-OE-PVL" eventType="touchUpInside" id="ouS-EW-PlY"/>
                                                         </connections>
-                                                    </button>
+                                                    </button> 
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yxs-jI-rQF">
                                                         <rect key="frame" x="162.5" y="0.0" width="132.5" height="31"/>
                                                         <state key="normal" title="Button"/>
@@ -215,7 +220,7 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                        </subviews>
+                                        </subviews> 
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aPG-Ub-fEW">
                                         <rect key="frame" x="147.5" y="458" width="0.0" height="0.0"/>
@@ -225,7 +230,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="I2D-H1-PkR"/>
                                                     <constraint firstAttribute="width" constant="105" id="aBm-zz-sHq"/>
-                                                </constraints>
+                                                </constraints> 
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Register">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -234,10 +239,10 @@
                                                 <connections>
                                                     <action selector="onRegister:" destination="sNd-OE-PVL" eventType="touchUpInside" id="vje-c5-3Pg"/>
                                                     <segue destination="kuP-7w-j8G" kind="show" id="dkk-xT-Tcm"/>
-                                                </connections>
+                                                </connections> 
                                             </button>
                                         </subviews>
-                                    </stackView>
+                                    </stackView> 
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -370,8 +375,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+<<<<<<< Updated upstream
                         <viewLayoutGuide key="safeArea" id="sQ2-OM-fYI"/>
                         <color key="backgroundColor" red="0.44313725490196076" green="0.67450980392156867" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+=======
+                        <viewLayoutGuide key = "safeArea" id = "sQ2-OM-fYI"/>
+                        <color key="backgroundColor" red="0.20392156862745098" green="0.43137254901960786" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+>>>>>>> Stashed changes
                     </view>
                     <navigationItem key="navigationItem" title="Admin Register" id="acf-jM-PLL">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ZfK-vZ-I7V">
@@ -502,7 +512,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="115" translatesAutoresizingMaskIntoConstraints="NO" id="IBJ-uO-kRV">
                                         <rect key="frame" x="0.0" y="128" width="341" height="36"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7j-lc-DOF">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment = "alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7j-lc-DOF">
                                                 <rect key="frame" x="0.0" y="0.0" width="78" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="78" id="poA-hN-G5a"/>
