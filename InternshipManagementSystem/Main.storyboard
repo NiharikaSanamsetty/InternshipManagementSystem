@@ -122,7 +122,7 @@
                             <constraint firstItem="DQ0-dJ-Bez" firstAttribute="centerY" secondItem="9k2-HX-amn" secondAttribute="centerY" id="66c-lf-MAp"/>
                             <constraint firstItem="DQ0-dJ-Bez" firstAttribute="centerX" secondItem="9k2-HX-amn" secondAttribute="centerX" id="6Tz-yz-GPg"/>
                         </constraints >
-                    </view>
+                    < /view >
                     <navigationItem key="navigationItem" title="Student" id="GHG-jL-VdP"/>
                     <connections>
                         <outlet property="email" destination="16g-bd-h6E" id="qR5-xU-lRf"/>
