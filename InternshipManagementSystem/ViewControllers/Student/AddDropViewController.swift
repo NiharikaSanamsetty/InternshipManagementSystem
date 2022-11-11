@@ -91,7 +91,7 @@ class AddDropViewController: UIViewController , UITableViewDelegate , UITableVie
    }
 
    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-       return 180
+       return 240
    }
 
 
@@ -147,7 +147,7 @@ class AddDropViewController: UIViewController , UITableViewDelegate , UITableVie
            
            var itemsArray = [StudentFormData]()
            
-           for (index,document) in querySnapshot.documents.enumerated() {
+           for (_,document) in querySnapshot.documents.enumerated() {
                do {
                    let item = try document.data(as: StudentFormData.self)
                    itemsArray.append(item)

@@ -12,7 +12,7 @@ class ImagePdfCell: UICollectionViewCell {
    
    func setData(attchment:AttachmentArray,frame:CGRect) {
        
-     /* guard let path = Bundle.main.url(forResource: "test", withExtension: "pdf") else { return }
+      /* guard let path = Bundle.main.url(forResource: "test", withExtension: "pdf") else { return }
        
        if let document = PDFDocument(url: path) {
            let pdfView = PDFView()
@@ -23,7 +23,6 @@ class ImagePdfCell: UICollectionViewCell {
            self.pdfView.isHidden = false
            self.pdfView.addSubview(pdfView)
        } */
-
        
        
 

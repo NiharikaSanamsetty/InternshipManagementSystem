@@ -18,6 +18,8 @@ class ApplicationStatusCell: UITableViewCell {
     
     @IBOutlet weak var attchmentButton: UIButton!
     
+    @IBOutlet weak var facultyEmail: UILabel!
+    @IBOutlet weak var facultyName: UILabel!
     
     func setData(data:StudentFormData) {
        
@@ -26,7 +28,12 @@ class ApplicationStatusCell: UITableViewCell {
         self.date.text = data.date
         self.status.text = data.status
         self.id.text = data.id
+        self.facultyName.text = data.professorName
+        self.facultyEmail.text = data.professorEmail
         
+        if(data.status == "Pending") {
+            self.status.textColor = .orange
+        }
         
         if(data.status == "Approved") {
             self.status.textColor = .green
@@ -35,11 +42,6 @@ class ApplicationStatusCell: UITableViewCell {
         if(data.status == "Rejected") {
             self.status.textColor = .red
         }
-
-	if(data.status == "Pending") {
-            self.status.textColor = .blue
-        }
- 
         
         
         if  attchmentButton != nil {

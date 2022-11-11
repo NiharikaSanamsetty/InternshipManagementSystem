@@ -12,13 +12,6 @@ class AdminLogin: UIViewController {
     @IBOutlet weak var password: UITextField!
     @IBOutlet weak var email: UITextField!
     
-   
-    override func viewDidLoad() {
-        
-//        SceneDelegate.shared?.checkLogin()
-       
-    }
-    
     @IBAction func onLogin(_ sender: Any) {
         
         if(!CommonMethods.shared.isValidEmail(testStr: email.text!)) {
@@ -43,7 +36,7 @@ class AdminLogin: UIViewController {
     @IBAction func onForgotPassword(_ sender: Any) {
         
     }
-   
-    
+
 
 }
+ 

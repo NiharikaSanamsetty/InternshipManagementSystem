@@ -6,6 +6,9 @@ import FirebaseFirestore
 
 class StudentFourmFinal: UIViewController {
 
+    @IBOutlet weak var tcImage: UIImageView!
+    
+    var tcAccept = false
     var secondPageData = [String:String]()
     var imagePicker: ImagePicker!
     var attchmentDocs: [AttachmentArray] = []
@@ -37,6 +40,18 @@ class StudentFourmFinal: UIViewController {
 
     }
     
+    @IBAction func onTC(_ sender: Any) {
+        tcImage.clipsToBounds = true
+        tcImage.layer.cornerRadius = 9
+        tcAccept = !tcAccept
+        
+        if tcAccept {
+            self.tcImage.backgroundColor = UIColor.black
+        } else {
+            self.tcImage.backgroundColor = UIColor.clear
+        }
+    }
+    
     @IBAction func onUpload(_ sender: UIButton) {
         self.view.endEditing(true)
         self.imagePicker.present(from: sender)
@@ -46,27 +61,37 @@ class StudentFourmFinal: UIViewController {
     @IBAction func onSubmit(_ sender: Any) {
         
         
-        var studentFormData = StudentFormData(company: secondPageData["company"], contact: secondPageData["contact"], date: getTodayDate(), department: secondPageData["department"], email: secondPageData["email"], firstName: secondPageData["firstName"], lastName: secondPageData["lastName"], location: secondPageData["location"], pocContact: secondPageData["pocContact"], pocEmail: secondPageData["pocEmail"], status: "Pending", uploadFileList: [] ,id:"")
-   
-        
-        
-        if(!attchmentDocs.isEmpty){
-            studentFormData.uploadFileList = self.attachmentsArray
-        }
-       
-        
-        
-        MBProgressHUD().show(animated: true)
-        
-        FireStoreManager.shared.submitStudentApplication(studentFormData: studentFormData , attchmentDocs : attchmentDocs) { _ in
-            MBProgressHUD().hide(animated: true)
+        if(!tcAccept){
             
-            self.showOkAlertWithCallBack(message: "Application Form Submitted!!") {
-                SceneDelegate.shared?.checkLogin()
+                   showAlert(message: "Please Accept t&c")
+                    return
+        
+        }else {
+            
+            var studentFormData = StudentFormData(professorName:secondPageData["professorName"],professorEmail:secondPageData["professorEmail"],company: secondPageData["company"], contact: secondPageData["contact"], date: getTodayDate(), department: secondPageData["department"], email: secondPageData["email"], firstName: secondPageData["firstName"], lastName: secondPageData["lastName"], location: secondPageData["location"], pocContact: secondPageData["pocContact"], pocEmail: secondPageData["pocEmail"], status: "Pending", uploadFileList: [] ,id:"")
+            
+            if(!attchmentDocs.isEmpty){
+                studentFormData.uploadFileList = self.attachmentsArray
+            }
+           
+            
+            
+            MBProgressHUD().show(animated: true)
+            
+            FireStoreManager.shared.submitStudentApplication(studentFormData: studentFormData , attchmentDocs : attchmentDocs) { _ in
+                MBProgressHUD().hide(animated: true)
+                
+                self.showOkAlertWithCallBack(message: "Application Form Submitted!!") {
+                    SceneDelegate.shared?.checkLogin()
+                }
+                
+               
             }
             
-           
         }
+        
+        
+       
         
         
     }
@@ -132,7 +157,7 @@ struct UploadFileList: Codable {
 
 struct StudentFormData: Codable {
     
-    let company, contact, date, department , email, firstName, lastName, location , pocContact ,pocEmail ,status : String?
+    let professorName, professorEmail , company, contact, date, department , email, firstName, lastName, location , pocContact ,pocEmail ,status : String?
     var uploadFileList: [UploadFileList]?
     var id = ""
 }

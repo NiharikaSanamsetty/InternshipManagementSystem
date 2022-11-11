@@ -44,6 +44,12 @@ class StudentFourmTwo: UIViewController {
             return false
         }
         
+        
+        if(!CommonMethods.shared.isValidPhone(phone: self.contact.text!)) {
+             showAlertAnyWhere(message: "Please enter valid contact number.")
+            return false
+        }
+        
         if(!CommonMethods.shared.isValidEmail(testStr: pocEmail.text!)) {
              showAlertAnyWhere(message: "Please enter valid email.")
             return false

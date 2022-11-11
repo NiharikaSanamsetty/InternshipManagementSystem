@@ -13,6 +13,8 @@ class UpdateFormViewController: UIViewController{
    @IBOutlet weak var location: UITextField!
    @IBOutlet weak var company: UITextField!
    
+    @IBOutlet weak var professorEmail: UITextField!
+    @IBOutlet weak var professorName: UITextField!
     var querySnapshot : StudentFormData!
     
 
@@ -20,6 +22,9 @@ class UpdateFormViewController: UIViewController{
         self.title = "Update Form"
         self.setData()
         self.disableEditFields()
+        
+        self.professorEmail.isEnabled = false
+        self.professorName.isEnabled = false
     }
     
     
@@ -40,7 +45,9 @@ class UpdateFormViewController: UIViewController{
         self.location.text = querySnapshot.location
         self.pocContact.text = querySnapshot.pocContact
         self.pocEmail.text = querySnapshot.pocEmail
-       
+        self.professorName.text = querySnapshot.professorName
+        self.professorEmail.text = querySnapshot.professorEmail
+    
     }
    
    @IBAction func onUpdate(_ sender: Any) {
@@ -48,7 +55,12 @@ class UpdateFormViewController: UIViewController{
        
        if(validate()) {
            
-           let newData = StudentFormData(company:  self.company.text!, contact:   self.contact.text!, date: querySnapshot.date!, department:  self.department.text!, email:  self.email.text!, firstName:  self.firstName.text!, lastName:  self.lastName.text!, location:  self.location.text!, pocContact:  self.pocContact.text!, pocEmail:  self.pocEmail.text!, status:  self.querySnapshot.status, uploadFileList:  self.querySnapshot.uploadFileList, id:  self.querySnapshot.id)
+           var status = self.querySnapshot.status
+           
+           if(status == "Rejected") {
+               status = "Pending"
+           }
+           let newData = StudentFormData(professorName:"",professorEmail: "", company:  self.company.text!, contact:   self.contact.text!, date: querySnapshot.date!, department:  self.department.text!, email:  self.email.text!, firstName:  self.firstName.text!, lastName:  self.lastName.text!, location:  self.location.text!, pocContact:  self.pocContact.text!, pocEmail:  self.pocEmail.text!, status: status, uploadFileList:  self.querySnapshot.uploadFileList, id:  self.querySnapshot.id)
         
            FireStoreManager.shared.updateData(documentId:newData.id, data:newData)
            
@@ -122,7 +134,17 @@ class UpdateFormViewController: UIViewController{
            return false
        }
        
-       
+        
+        if(!CommonMethods.shared.isValidEmail(testStr: professorEmail.text!)) {
+             showAlertAnyWhere(message: "Please enter valid email.")
+            return false
+        }
+        
+        if(self.professorName.text!.isEmpty) {
+             showAlertAnyWhere(message: "Please enter professor name.")
+            return false
+        }
+        
        return true
    }
    

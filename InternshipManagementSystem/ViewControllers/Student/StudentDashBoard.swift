@@ -7,6 +7,9 @@ class StudentDashBoard: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        FireStoreManager.shared.getCategories() { _ in
+             
+        }
     }
     
 

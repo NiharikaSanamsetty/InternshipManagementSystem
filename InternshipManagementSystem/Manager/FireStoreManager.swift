@@ -9,6 +9,7 @@ import FirebaseFirestoreSwift
 
 class FireStoreManager {
 
+    var departments = [String]()
     
     public static let shared = FireStoreManager()
     var attachmentsArray: [AttachmentArray] = []
@@ -51,12 +52,14 @@ class FireStoreManager {
           }
 
     }
+    
     func changeStatusOfApplication(reason:String = "",id:String,status:String,completionHandler:@escaping () -> Void){
         
             db.collection("StudentApplicationForms").document(id).updateData(["status" : status , "reason" : reason]) { err in
                 return completionHandler()
             }
         }
+    
     func updateData(documentId:String,data:StudentFormData) {
         
         let dbRef = db.collection("StudentApplicationForms").document(documentId)
@@ -156,7 +159,14 @@ class FireStoreManager {
                 
                 self.addDataToFireStore(data: data) { _ in
                     
-                    showAlertAnyWhere(message: "Registration Success!! You can login now")
+                  
+                    showOkAlertAnyWhereWithCallBack(message: "Registration Success!!") {
+                         
+                        DispatchQueue.main.async {
+                            UIApplication.topViewController()!.navigationController?.popViewController(animated: true)
+                        }
+                       
+                    }
                     
                 }
                
@@ -233,6 +243,39 @@ extension FireStoreManager {
             } else if let error = error {
                 print("Error: \(error)")
                 return
+            }
+           
+        }
+
+
+    }
+    
+    func getCategories(completionHandler:@escaping (Bool) -> Void){
+        
+        
+        let dbRef = db.collection("Department")
+     
+        dbRef.getDocuments { snap, error in
+            
+            if let _ = error {
+                
+            }else {
+                
+                if let querySnapshot = snap {
+                    
+                    var itemsArray = [String]()
+                    
+                    for (_,document) in querySnapshot.documents.enumerated() {
+                        
+                        itemsArray.append(document.data()["Name"] as! String)
+                    }
+                    self.departments = itemsArray
+                    
+                    return completionHandler(true)
+                }else {
+                    showAlertAnyWhere(message: "Something went wrong!!")
+                }
+               
             }
            
         }
@@ -464,5 +507,57 @@ class FirFile: NSObject {
     
     
     
+    
+}
+
+extension FireStoreManager {
+    
+    
+    
+    func getApplicationFourmsByQuery(field:String,compareValue:String,completionHandler:@escaping (QuerySnapshot) -> Void){
+        
+        
+       let  query = db.collection("StudentApplicationForms").whereField(field, isEqualTo: compareValue)
+        
+        query.getDocuments { (snapshot, err) in
+                    
+            if let _ = err {
+                  return
+            }else {
+                
+                
+                if let querySnapshot = snapshot {
+                    return completionHandler(querySnapshot)
+                }else {
+                    return
+                }
+               
+            }
+        }
+          
+    }
+    
+    func getAllApplications(completionHandler:@escaping (QuerySnapshot) -> Void){
+        
+        
+        let  query = db.collection("StudentApplicationForms").order(by: "date")
+        
+        query.getDocuments { (snapshot, err) in
+                    
+            if let _ = err {
+                  return
+            }else {
+                
+                
+                if let querySnapshot = snapshot {
+                    return completionHandler(querySnapshot)
+                }else {
+                    return
+                }
+               
+            }
+        }
+          
+    }
     
 }

@@ -58,10 +58,23 @@ class StudentApplicationStatusVC: UIViewController , UITableViewDelegate, UITabl
         
         if(querySnapshot.count > 0 ) {
             
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "UpdateFormViewController") as! UpdateFormViewController
-            vc.querySnapshot = self.querySnapshot.first!
-            self.navigationController!.pushViewController(vc, animated: true)
+            if(querySnapshot.first!.status == "Approved") {
+                
+                showOkAlertWithCallBack(message: "Application Already Approved, You Can't Update Now, but you can delete it") {
+                     
+                    self.showDeleteDialog()
+                    
+                }
+                
+            }else {
+                
+                let vc = self.storyboard?.instantiateViewController(withIdentifier: "UpdateFormViewController") as! UpdateFormViewController
+                vc.querySnapshot = self.querySnapshot.first!
+                self.navigationController!.pushViewController(vc, animated: true)
+                
+            }
             
+          
             
         }
         
@@ -90,7 +103,7 @@ extension StudentApplicationStatusVC {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return 240
     }
     
     
@@ -105,4 +118,35 @@ extension StudentApplicationStatusVC {
     }
     
     
+}
+
+
+extension StudentApplicationStatusVC {
+    
+    
+    func showDeleteDialog() {
+        
+        let refreshAlert = UIAlertController(title: "Alert", message: "Do You want to delete the application?", preferredStyle: UIAlertController.Style.alert)
+
+            
+            refreshAlert.addAction(UIAlertAction(title: "No", style: .cancel, handler: { (action: UIAlertAction!) in
+                 
+                
+            }))
+        
+            refreshAlert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { (action: UIAlertAction!) in
+               
+                FireStoreManager.shared.deleteDocument(documentId:self.querySnapshot.first!.id) { _ in
+                     
+                    self.querySnapshot.removeAll()
+                    self.tableView.reloadData()
+                    
+                    showAlertAnyWhere(message: "Application Deleted")
+                }
+                
+            }))
+        
+
+            self.present(refreshAlert, animated: true, completion: nil)
+    }
 }
