@@ -53,10 +53,11 @@ class FacultyDashBoardAdmin: UIViewController , UITableViewDelegate , UITableVie
      self.view.endEditing(true)
 
      if(!searchTextField.text!.isEmpty) {
-         self.performSearch()
-     }else {
+         self.performSearch( )
+     }
+      else{
          filterSnapShot = tempSnapshot
-         self.tableView.reloadData()
+         self.tableView.reloadData( )
      }
  }
 
@@ -257,14 +258,14 @@ extension FacultyDashBoardAdmin {
        
        let dialog = SelectionDialog(title: "Please Select Status", closeButtonTitle: "Close")
        
-       dialog.addItem(item: "Pending", icon: UIImage(named: "pending")!) {
+       dialog.addItem(item: "Pending", icon: UIImage(named: "Pending")!) {
             
            dialog.close()
            self.searchByStatus(status: "Pending")
            
        }
        
-       dialog.addItem(item: "Approved", icon: UIImage(named: "approved")!) {
+       dialog.addItem(item: "Approved", icon: UIImage(named: "Approved")!) {
           
            dialog.close()
            self.searchByStatus(status: "Approved")
@@ -273,7 +274,7 @@ extension FacultyDashBoardAdmin {
        }
        
        
-       dialog.addItem(item: "Rejected", icon: UIImage(named: "rejected")!) {
+       dialog.addItem(item: "Rejected", icon: UIImage(named: "Rejected")!) {
            
            dialog.close()
            self.searchByStatus(status: "Rejected")
@@ -303,7 +304,7 @@ extension FacultyDashBoardAdmin {
    
    func sendApporvedEmail(toEmail:String,toName:String) {
        let subject = "Application Approved"
-       let emailBody = "<h1>Congratulations  \(toName) your Application got Approved.</h1>"
+       let emailBody = "<h1> Congratulations  \(toName) your Application got Approved.</h1>"
        sendEmail(to: toEmail, subject: subject, emailBody: emailBody)
        
    }
