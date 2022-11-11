@@ -370,8 +370,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+<<<<<<< Updated upstream
                         <viewLayoutGuide key="safeArea" id="sQ2-OM-fYI"/>
                         <color key="backgroundColor" red="0.44313725490196076" green="0.67450980392156867" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+=======
+                        <viewLayoutGuide key = "safeArea" id = "sQ2-OM-fYI"/>
+                        <color key="backgroundColor" red="0.20392156862745098" green="0.43137254901960786" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+>>>>>>> Stashed changes
                     </view>
                     <navigationItem key="navigationItem" title="Admin Register" id="acf-jM-PLL">
                         <barButtonItem key="backBarButtonItem" title="Back" id="ZfK-vZ-I7V">
@@ -502,7 +507,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="115" translatesAutoresizingMaskIntoConstraints="NO" id="IBJ-uO-kRV">
                                         <rect key="frame" x="0.0" y="128" width="341" height="36"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7j-lc-DOF">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment = "alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d7j-lc-DOF">
                                                 <rect key="frame" x="0.0" y="0.0" width="78" height="36"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="78" id="poA-hN-G5a"/>
