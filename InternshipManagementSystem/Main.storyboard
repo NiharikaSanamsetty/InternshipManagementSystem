@@ -200,7 +200,7 @@
                                                         <connections>
                                                             <action selector="onLogin:" destination="sNd-OE-PVL" eventType="touchUpInside" id="ouS-EW-PlY"/>
                                                         </connections>
-                                                    </button>
+                                                    </button> 
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yxs-jI-rQF">
                                                         <rect key="frame" x="162.5" y="0.0" width="132.5" height="31"/>
                                                         <state key="normal" title="Button"/>
@@ -215,7 +215,7 @@
                                                     </button>
                                                 </subviews>
                                             </stackView>
-                                        </subviews>
+                                        </subviews> 
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aPG-Ub-fEW">
                                         <rect key="frame" x="147.5" y="458" width="0.0" height="0.0"/>
@@ -225,7 +225,7 @@
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="31" id="I2D-H1-PkR"/>
                                                     <constraint firstAttribute="width" constant="105" id="aBm-zz-sHq"/>
-                                                </constraints>
+                                                </constraints> 
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="tinted" title="Register">
                                                     <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -234,10 +234,10 @@
                                                 <connections>
                                                     <action selector="onRegister:" destination="sNd-OE-PVL" eventType="touchUpInside" id="vje-c5-3Pg"/>
                                                     <segue destination="kuP-7w-j8G" kind="show" id="dkk-xT-Tcm"/>
-                                                </connections>
+                                                </connections> 
                                             </button>
                                         </subviews>
-                                    </stackView>
+                                    </stackView> 
                                 </subviews>
                             </stackView>
                         </subviews>
