@@ -121,7 +121,7 @@
                         <constraints>
                             <constraint firstItem="DQ0-dJ-Bez" firstAttribute="centerY" secondItem="9k2-HX-amn" secondAttribute="centerY" id="66c-lf-MAp"/>
                             <constraint firstItem="DQ0-dJ-Bez" firstAttribute="centerX" secondItem="9k2-HX-amn" secondAttribute="centerX" id="6Tz-yz-GPg"/>
-                        </constraints>
+                        </constraints >
                     </view>
                     <navigationItem key="navigationItem" title="Student" id="GHG-jL-VdP"/>
                     <connections>
