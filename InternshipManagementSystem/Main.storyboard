@@ -114,17 +114,17 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                            </stackView>
+                            </stackView> 
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="XXm-5b-IVa"/>
                         <color key="backgroundColor" red="0.44313725490196076" green="0.67450980392156867" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
+                        <constraints> 
                             <constraint firstItem="DQ0-dJ-Bez" firstAttribute="centerY" secondItem="9k2-HX-amn" secondAttribute="centerY" id="66c-lf-MAp"/>
                             <constraint firstItem="DQ0-dJ-Bez" firstAttribute="centerX" secondItem="9k2-HX-amn" secondAttribute="centerX" id="6Tz-yz-GPg"/>
                         </constraints >
                     < /view >
                     <navigationItem key="navigationItem" title="Student" id="GHG-jL-VdP"/>
-                    <connections>
+                    <connections> 
                         <outlet property="email" destination="16g-bd-h6E" id="qR5-xU-lRf"/>
                         <outlet property="password" destination="Xic-Cg-y6b" id="1ad-pI-Boi"/>
                     </connections>
@@ -135,7 +135,7 @@
         </scene>
         <!--Admin-->
         <scene sceneID="adw-9e-Ge5">
-            <objects>
+            <objects> 
                 <viewController storyboardIdentifier="AdminLogin" title="Admin" id="sNd-OE-PVL" customClass="AdminLogin" customModule="InternshipManagementSystem" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D0m-Pp-ist">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -166,7 +166,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
-                                            </stackView>
+                                            </stackView> 
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="x2K-Eb-PRU">
                                                 <rect key="frame" x="0.0" y="77" width="295" height="34"/>
                                                 <subviews>
@@ -175,7 +175,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <nil key="highlightedColor"/>
-                                                    </label>
+                                                    </label> 
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="snc-Dc-p6n">
                                                         <rect key="frame" x="125" y="0.0" width="170" height="34"/>
                                                         <constraints>
