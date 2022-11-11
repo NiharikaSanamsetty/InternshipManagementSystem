@@ -108,8 +108,7 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
  }
 
  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-     let id =  self.filterSnapShot[indexPath.row].id
+ let id =  self.filterSnapShot[indexPath.row].id
      let name =  self.filterSnapShot[indexPath.row].firstName ?? ""
      let email =  self.filterSnapShot[indexPath.row].email!
 
@@ -124,8 +123,11 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
              self.getApplications(email: self.searchedEmail)
          })
      }
+
+
+    
      
-     dialog.addItem(item: "Approved", icon: UIImage(named: "approved")!) {
+     dialog.addItem(item: "Approved", icon: UIImage(named: "Approved")!) {
         
          dialog.close()
          
@@ -138,7 +140,7 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
         
      }
      
-     dialog.addItem(item: "Rejected", icon: UIImage(named: "rejected")!) {
+     dialog.addItem(item: "Rejected", icon: UIImage(named: "Rejected")!) {
          
          dialog.close()
          
@@ -152,7 +154,8 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
                       self.getApplications(email: self.searchedEmail)
                            })
                  self.sendRejectedEmail(toEmail: email, toName: name)
-             }
+           
+  }
             
          })
 
@@ -162,20 +165,6 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
      
 
  }
-
-
-func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
-     let cell = self.tableView.dequeueReusableCell(withIdentifier: "ApplicationStatusCellFaculty") as! ApplicationStatusCellFaculty
-     let data = self.filterSnapShot[indexPath.row]
-     cell.attchmentButton.tag = indexPath.row
-     cell.attchmentButton.addTarget(self, action: #selector(showAttchment(_:)), for: .touchUpInside)
-     cell.setData(data: data)
-
-     return cell
- }
-
-
  @objc func copyButtonTapped(_ sender: UIButton){
 
 
@@ -185,6 +174,15 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
      toast.show()
  }
   
+  @objc func showAttchment(_ sender: UIButton){
+
+      
+      let vc = self.storyboard?.instantiateViewController(withIdentifier: "PreViewVC") as! PreViewVC
+      vc.attachments = self.filterSnapShot[sender.tag].uploadFileList!
+      self.navigationController?.pushViewController(vc, animated: true)
+      
+  
+  }
 
 
   
@@ -215,7 +213,7 @@ func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> U
          
          
          self.filterSnapShot = itemsArray
-         self.tableView.reloadData()
+         self.tableView.reloadData( )
      
       
 
@@ -251,7 +249,7 @@ extension ViewFacultyApplicationsAdmin {
    
    func sendApporvedEmail(toEmail:String,toName:String) {
        let subject = "Application Approved"
-       let emailBody = "<h1>Congratulations  \(toName) your Application got Approved.</h1>"
+       let emailBody = "<h1>Congratulations \(toName) your Application got Approved. </h1>"
        sendEmail(to: toEmail, subject: subject, emailBody: emailBody)
        
    }
