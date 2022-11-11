@@ -63,7 +63,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
-                                            </stackView>
+                                            </stackView >
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Uw8-AT-tG8">
                                                 <rect key="frame" x="0.0" y="154" width="295" height="31"/>
                                                 <subviews>
