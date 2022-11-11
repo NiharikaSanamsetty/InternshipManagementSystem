@@ -133,6 +133,18 @@ class FacultyDashBoardAdmin: UIViewController , UITableViewDelegate , UITableVie
          })
      }
      
+
+ @objc func showAttchment(_ sender: UIButton){
+
+      
+      let vc = self.storyboard?.instantiateViewController(withIdentifier: "PreViewVC") as! PreViewVC
+      vc.attachments = self.filterSnapShot[sender.tag].uploadFileList!
+      self.navigationController?.pushViewController(vc, animated: true)
+      
+  
+  }
+
+
      dialog.addItem(item: "Approved", icon: UIImage(named: "approved")!) {
         
          dialog.close()
