@@ -125,7 +125,7 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
          })
      }
      
-     dialog.addItem(item: "Approved", icon: UIImage(named: "approved")!) {
+     dialog.addItem(item: "Approved", icon: UIImage(named: "Approved")!) {
         
          dialog.close()
          
@@ -138,7 +138,7 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
         
      }
      
-     dialog.addItem(item: "Rejected", icon: UIImage(named: "rejected")!) {
+     dialog.addItem(item: "Rejected", icon: UIImage(named: "Rejected")!) {
          
          dialog.close()
          
@@ -152,7 +152,8 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
                       self.getApplications(email: self.searchedEmail)
                            })
                  self.sendRejectedEmail(toEmail: email, toName: name)
-             }
+           
+  }
             
          })
 
@@ -210,7 +211,7 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
          
          
          self.filterSnapShot = itemsArray
-         self.tableView.reloadData()
+         self.tableView.reloadData( )
      
       
 
@@ -246,7 +247,7 @@ extension ViewFacultyApplicationsAdmin {
    
    func sendApporvedEmail(toEmail:String,toName:String) {
        let subject = "Application Approved"
-       let emailBody = "<h1>Congratulations  \(toName) your Application got Approved.</h1>"
+       let emailBody = "<h1>Congratulations \(toName) your Application got Approved. </h1>"
        sendEmail(to: toEmail, subject: subject, emailBody: emailBody)
        
    }
