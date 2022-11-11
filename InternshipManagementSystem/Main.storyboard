@@ -63,7 +63,7 @@
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
                                                 </subviews>
-                                            </stackView>
+                                            </stackView >
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Uw8-AT-tG8">
                                                 <rect key="frame" x="0.0" y="154" width="295" height="31"/>
                                                 <subviews>
@@ -95,7 +95,7 @@
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vgp-Gc-YOd">
                                         <rect key="frame" x="95" y="458" width="105" height="31"/>
-                                        <subviews>
+                                        <subviews >
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhP-dE-Wil">
                                                 <rect key="frame" x="0.0" y="0.0" width="105" height="31"/>
                                                 <constraints>
