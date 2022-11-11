@@ -163,6 +163,20 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
      
 
  }
+
+
+func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+     let cell = self.tableView.dequeueReusableCell(withIdentifier: "ApplicationStatusCellFaculty") as! ApplicationStatusCellFaculty
+     let data = self.filterSnapShot[indexPath.row]
+     cell.attchmentButton.tag = indexPath.row
+     cell.attchmentButton.addTarget(self, action: #selector(showAttchment(_:)), for: .touchUpInside)
+     cell.setData(data: data)
+
+     return cell
+ }
+
+
  @objc func copyButtonTapped(_ sender: UIButton){
 
 
@@ -172,15 +186,6 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
      toast.show()
  }
   
-  @objc func showAttchment(_ sender: UIButton){
-
-      
-      let vc = self.storyboard?.instantiateViewController(withIdentifier: "PreViewVC") as! PreViewVC
-      vc.attachments = self.filterSnapShot[sender.tag].uploadFileList!
-      self.navigationController?.pushViewController(vc, animated: true)
-      
-  
-  }
 
 
   
