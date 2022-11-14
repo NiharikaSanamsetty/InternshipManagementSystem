@@ -244,21 +244,5 @@ extension ViewFacultyApplicationsAdmin {
 
 
 
-extension ViewFacultyApplicationsAdmin {
-   
-   
-   func sendApporvedEmail(toEmail:String,toName:String) {
-       let subject = "Application Approved"
-       let emailBody = "<h1>Congratulations \(toName) your Application got Approved. </h1>"
-       sendEmail(to: toEmail, subject: subject, emailBody: emailBody)
-       
-   }
-   
-   
-   func sendRejectedEmail(toEmail:String,toName:String) {
-       
-       let subject = "Application Approved"
-       let emailBody = "<h1>Sorry \(toName) your Application got Rejected.</h1>"
-       sendEmail(to: toEmail, subject: subject, emailBody: emailBody)
-   }
+
 }
