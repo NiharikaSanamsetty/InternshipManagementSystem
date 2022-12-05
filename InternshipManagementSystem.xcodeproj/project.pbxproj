@@ -78,6 +78,9 @@
 		3FD1E10328ED64E3003E8C62 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3FD1E10228ED64E3003E8C62 /* FirebaseFirestore */; };
 		3FD1E10528ED64E3003E8C62 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 3FD1E10428ED64E3003E8C62 /* FirebaseFirestoreSwift */; };
 		3FD1E10728ED64E3003E8C62 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 3FD1E10628ED64E3003E8C62 /* FirebaseStorage */; };
+		3FDAAC3A291D97A700CEFD0E /* FacultyDashBoardAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDAAC39291D97A700CEFD0E /* FacultyDashBoardAdmin.swift */; };
+		3FDAAC3C291D97B000CEFD0E /* ViewFacultyApplicationsAdmin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDAAC3B291D97B000CEFD0E /* ViewFacultyApplicationsAdmin.swift */; };
+		3FDC73572935192C009EA10B /* FirestoreManager+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FDC73562935192C009EA10B /* FirestoreManager+Ext.swift */; };
 		3FECF38A28FCF8FD006239A3 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECF38728FCF8FD006239A3 /* UIImageExtension.swift */; };
 		3FECF39128FFB63E006239A3 /* ApplicationStatusCellFaculty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FECF39028FFB63E006239A3 /* ApplicationStatusCellFaculty.swift */; };
 		BF756696AEF28610D7F9F7E8 /* Pods_InternshipManagementSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5CFE3C95871958A1FE4E62F /* Pods_InternshipManagementSystem.framework */; };
@@ -152,6 +155,9 @@
 		3F6FDE55283FDA1900871925 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FBDDB65290F847600F755D3 /* UrlSesion.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UrlSesion.swift; sourceTree = "<group>"; };
 		3FBDDB67290F86AF00F755D3 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		3FDAAC39291D97A700CEFD0E /* FacultyDashBoardAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FacultyDashBoardAdmin.swift; sourceTree = "<group>"; };
+		3FDAAC3B291D97B000CEFD0E /* ViewFacultyApplicationsAdmin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewFacultyApplicationsAdmin.swift; sourceTree = "<group>"; };
+		3FDC73562935192C009EA10B /* FirestoreManager+Ext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "FirestoreManager+Ext.swift"; sourceTree = "<group>"; };
 		3FECF38728FCF8FD006239A3 /* UIImageExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		3FECF39028FFB63E006239A3 /* ApplicationStatusCellFaculty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApplicationStatusCellFaculty.swift; sourceTree = "<group>"; };
 		6D4063CF968654443AE994B0 /* Pods-InternshipManagementSystem.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InternshipManagementSystem.debug.xcconfig"; path = "Target Support Files/Pods-InternshipManagementSystem/Pods-InternshipManagementSystem.debug.xcconfig"; sourceTree = "<group>"; };
@@ -200,6 +206,7 @@
 			children = (
 				005E506C28C1BF3A007DE35C /* UserDefaultsManager.swift */,
 				005E506D28C1BF3A007DE35C /* FireStoreManager.swift */,
+				3FDC73562935192C009EA10B /* FirestoreManager+Ext.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -256,6 +263,8 @@
 				005E507A28C1BF3B007DE35C /* AdminRegister.swift */,
 				005E507B28C1BF3B007DE35C /* AdminLogin.swift */,
 				005E507C28C1BF3B007DE35C /* AdminDashboard.swift */,
+				3FDAAC39291D97A700CEFD0E /* FacultyDashBoardAdmin.swift */,
+				3FDAAC3B291D97B000CEFD0E /* ViewFacultyApplicationsAdmin.swift */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -555,10 +564,12 @@
 				00C9BC8928D1978C009E438B /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				005E508628C1BF3B007DE35C /* StudentRegister.swift in Sources */,
 				00A378AB28ECA11300DC8A11 /* ImagePdfCell.swift in Sources */,
+				3FDAAC3A291D97A700CEFD0E /* FacultyDashBoardAdmin.swift in Sources */,
 				005E508128C1BF3B007DE35C /* FacultyDashBoard.swift in Sources */,
 				00AF6B96290CC4D800D6DC56 /* SelectionDialog.swift in Sources */,
 				00AF6B9B290CE26E00D6DC56 /* Theme.swift in Sources */,
 				00C9BC9528D1978C009E438B /* IQUIView+IQKeyboardToolbar.swift in Sources */,
+				3FDAAC3C291D97B000CEFD0E /* ViewFacultyApplicationsAdmin.swift in Sources */,
 				00C9BC9728D1978C009E438B /* IQNSArray+Sort.swift in Sources */,
 				005E508228C1BF3B007DE35C /* FacultyRegister.swift in Sources */,
 				00970C2D28E2CFF10060DE8D /* UIApplication+Load.swift in Sources */,
@@ -580,6 +591,7 @@
 				00C9BC9028D1978C009E438B /* IQToolbar.swift in Sources */,
 				005E508328C1BF3B007DE35C /* FacultyLogin.swift in Sources */,
 				00C9BC8B28D1978C009E438B /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				3FDC73572935192C009EA10B /* FirestoreManager+Ext.swift in Sources */,
 				3F6FDE4A283FDA1400871925 /* SceneDelegate.swift in Sources */,
 				00C9BC6F28D18988009E438B /* AddDropViewController.swift in Sources */,
 				005E508928C1BF3B007DE35C /* AdminRegister.swift in Sources */,

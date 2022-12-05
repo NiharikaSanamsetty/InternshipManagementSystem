@@ -198,7 +198,7 @@ class FacultyDashBoard: UIViewController , UITableViewDelegate , UITableViewData
       
       
       
-      FireStoreManager.shared.getApplicationFourmsByQuery(field: "department", compareValue: UserDefaultsManager.shared.getDepartment()) { querySnapshot in
+      FireStoreManager.shared.getApplicationFourmsByQuery(field: "professorEmail", compareValue: UserDefaultsManager.shared.getEmail().lowercased()) { querySnapshot in
           
           var itemsArray = [StudentFormData]()
           

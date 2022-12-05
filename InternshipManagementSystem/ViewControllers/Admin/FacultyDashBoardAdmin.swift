@@ -53,11 +53,10 @@ class FacultyDashBoardAdmin: UIViewController , UITableViewDelegate , UITableVie
      self.view.endEditing(true)
 
      if(!searchTextField.text!.isEmpty) {
-         self.performSearch( )
-     }
-      else{
+         self.performSearch()
+     }else {
          filterSnapShot = tempSnapshot
-         self.tableView.reloadData( )
+         self.tableView.reloadData()
      }
  }
 
@@ -133,18 +132,6 @@ class FacultyDashBoardAdmin: UIViewController , UITableViewDelegate , UITableVie
          })
      }
      
-
- @objc func showAttchment(_ sender: UIButton){
-
-      
-      let vc = self.storyboard?.instantiateViewController(withIdentifier: "PreViewVC") as! PreViewVC
-      vc.attachments = self.filterSnapShot[sender.tag].uploadFileList!
-      self.navigationController?.pushViewController(vc, animated: true)
-      
-  
-  }
-
-
      dialog.addItem(item: "Approved", icon: UIImage(named: "approved")!) {
         
          dialog.close()
@@ -270,14 +257,14 @@ extension FacultyDashBoardAdmin {
        
        let dialog = SelectionDialog(title: "Please Select Status", closeButtonTitle: "Close")
        
-       dialog.addItem(item: "Pending", icon: UIImage(named: "Pending")!) {
+       dialog.addItem(item: "Pending", icon: UIImage(named: "pending")!) {
             
            dialog.close()
            self.searchByStatus(status: "Pending")
            
        }
        
-       dialog.addItem(item: "Approved", icon: UIImage(named: "Approved")!) {
+       dialog.addItem(item: "Approved", icon: UIImage(named: "approved")!) {
           
            dialog.close()
            self.searchByStatus(status: "Approved")
@@ -286,7 +273,7 @@ extension FacultyDashBoardAdmin {
        }
        
        
-       dialog.addItem(item: "Rejected", icon: UIImage(named: "Rejected")!) {
+       dialog.addItem(item: "Rejected", icon: UIImage(named: "rejected")!) {
            
            dialog.close()
            self.searchByStatus(status: "Rejected")
@@ -316,44 +303,12 @@ extension FacultyDashBoardAdmin {
    
    func sendApporvedEmail(toEmail:String,toName:String) {
        let subject = "Application Approved"
-       let emailBody = "<h1> Congratulations  \(toName) your Application got Approved.</h1>"
+       let emailBody = "<h1>Congratulations  \(toName) your Application got Approved.</h1>"
        sendEmail(to: toEmail, subject: subject, emailBody: emailBody)
        
    }
    
-    func getApplications() {
-
-     self.tempSnapshot.remove()
-
-     
-       FireStoreManager.shared.getAllApplications() { querySnapshot in
-
-         
-         var itemsArray = [StudentFormData]()
-         
-         for (_,document) in querySnapshot.documents.enumerated() {
-             do {
-                 
-                 print(itemsArray.count)
-              
-             }catch let error {
-                 print(error)
-             }
-         }
-         
-         
-         self.tempSnapshot = itemsArray
-         self.filterSnapShot = itemsArray
-         self.tableView.reloadData()
-     
-      
-
-     }
-}
-
-
-}
-
+   
    func sendRejectedEmail(toEmail:String,toName:String) {
        
        let subject = "Application Approved"

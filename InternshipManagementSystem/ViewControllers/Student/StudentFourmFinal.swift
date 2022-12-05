@@ -81,6 +81,10 @@ class StudentFourmFinal: UIViewController {
             FireStoreManager.shared.submitStudentApplication(studentFormData: studentFormData , attchmentDocs : attchmentDocs) { _ in
                 MBProgressHUD().hide(animated: true)
                 
+                let subject = "New Application Submitted"
+                let emailBody = "<h1>Your Application form has been submitted for company : " + studentFormData.company! + " </h1>"
+                sendEmail(to: UserDefaultsManager.shared.getEmail(), subject: subject, emailBody: emailBody)
+                
                 self.showOkAlertWithCallBack(message: "Application Form Submitted!!") {
                     SceneDelegate.shared?.checkLogin()
                 }

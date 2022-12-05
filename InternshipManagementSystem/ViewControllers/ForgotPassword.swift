@@ -9,13 +9,22 @@ import UIKit
 
 class ForgotPassword: UIViewController {
 
+    @IBOutlet weak var email: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
-
+    @IBAction func onReset(_ sender: Any) {
+        
+        if(!CommonMethods.shared.isValidEmail(testStr: email.text!)) {
+             showAlertAnyWhere(message: "Please enter valid email.")
+        }else {
+             FireStoreManager.shared.sendPassword(email: email.text!)
+        }
+    }
+    
     /*
     // MARK: - Navigation
 

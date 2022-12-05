@@ -108,7 +108,8 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
  }
 
  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
- let id =  self.filterSnapShot[indexPath.row].id
+
+     let id =  self.filterSnapShot[indexPath.row].id
      let name =  self.filterSnapShot[indexPath.row].firstName ?? ""
      let email =  self.filterSnapShot[indexPath.row].email!
 
@@ -123,11 +124,8 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
              self.getApplications(email: self.searchedEmail)
          })
      }
-
-
-    
      
-     dialog.addItem(item: "Approved", icon: UIImage(named: "Approved")!) {
+     dialog.addItem(item: "Approved", icon: UIImage(named: "approved")!) {
         
          dialog.close()
          
@@ -140,7 +138,7 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
         
      }
      
-     dialog.addItem(item: "Rejected", icon: UIImage(named: "Rejected")!) {
+     dialog.addItem(item: "Rejected", icon: UIImage(named: "rejected")!) {
          
          dialog.close()
          
@@ -154,8 +152,7 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
                       self.getApplications(email: self.searchedEmail)
                            })
                  self.sendRejectedEmail(toEmail: email, toName: name)
-           
-  }
+             }
             
          })
 
@@ -213,7 +210,7 @@ class ViewFacultyApplicationsAdmin: UIViewController , UITableViewDelegate , UIT
          
          
          self.filterSnapShot = itemsArray
-         self.tableView.reloadData( )
+         self.tableView.reloadData()
      
       
 
@@ -244,5 +241,21 @@ extension ViewFacultyApplicationsAdmin {
 
 
 
-
+extension ViewFacultyApplicationsAdmin {
+   
+   
+   func sendApporvedEmail(toEmail:String,toName:String) {
+       let subject = "Application Approved"
+       let emailBody = "<h1>Congratulations  \(toName) your Application got Approved.</h1>"
+       sendEmail(to: toEmail, subject: subject, emailBody: emailBody)
+       
+   }
+   
+   
+   func sendRejectedEmail(toEmail:String,toName:String) {
+       
+       let subject = "Application Approved"
+       let emailBody = "<h1>Sorry \(toName) your Application got Rejected.</h1>"
+       sendEmail(to: toEmail, subject: subject, emailBody: emailBody)
+   }
 }

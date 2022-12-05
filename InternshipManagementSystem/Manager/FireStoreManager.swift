@@ -73,6 +73,9 @@ class FireStoreManager {
                 }else {
                     studentApplicationStatusVC.querySnapshot.removeAll()
                     studentApplicationStatusVC.tableView.reloadData()
+                    let subject = "Application Form Updated!!"
+                    let emailBody = "<h1>Your Application form has been updated.</h1>"
+                    sendEmail(to: UserDefaultsManager.shared.getEmail(), subject: subject, emailBody: emailBody)
                     showAlertAnyWhere(message: "Application Updated")
                 }
                 

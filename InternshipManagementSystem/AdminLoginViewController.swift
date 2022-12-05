@@ -1,5 +1,4 @@
 //
-// Admin login
 //  AdminLoginViewController.swift
 //  InternshipManagementSystem
 //

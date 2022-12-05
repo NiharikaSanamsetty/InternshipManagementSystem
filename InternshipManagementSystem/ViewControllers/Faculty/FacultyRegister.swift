@@ -43,7 +43,7 @@ class FacultyRegister: UIViewController {
         }
         
         if(!CommonMethods.shared.isValidEmail(testStr: email.text!)) {
-             showAlertAnyWhere(message: "Please enter a valid email.")
+             showAlertAnyWhere(message: "Please enter valid email.")
             return false
         }
         
@@ -53,7 +53,7 @@ class FacultyRegister: UIViewController {
         }
         
         if(self.department.text!.isEmpty) {
-             showAlertAnyWhere(message: "Please enter the department.")
+             showAlertAnyWhere(message: "Please enter department.")
             return false
         }
         

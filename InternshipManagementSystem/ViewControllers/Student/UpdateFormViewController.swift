@@ -60,7 +60,7 @@ class UpdateFormViewController: UIViewController{
            if(status == "Rejected") {
                status = "Pending"
            }
-           let newData = StudentFormData(professorName:"",professorEmail: "", company:  self.company.text!, contact:   self.contact.text!, date: querySnapshot.date!, department:  self.department.text!, email:  self.email.text!, firstName:  self.firstName.text!, lastName:  self.lastName.text!, location:  self.location.text!, pocContact:  self.pocContact.text!, pocEmail:  self.pocEmail.text!, status: status, uploadFileList:  self.querySnapshot.uploadFileList, id:  self.querySnapshot.id)
+           let newData = StudentFormData(professorName: self.professorName.text! ,professorEmail: self.professorEmail.text! , company:  self.company.text!, contact:   self.contact.text!, date: querySnapshot.date!, department:  self.department.text!, email:  self.email.text!, firstName:  self.firstName.text!, lastName:  self.lastName.text!, location:  self.location.text!, pocContact:  self.pocContact.text!, pocEmail:  self.pocEmail.text!, status: status, uploadFileList:  self.querySnapshot.uploadFileList, id:  self.querySnapshot.id)
         
            FireStoreManager.shared.updateData(documentId:newData.id, data:newData)
            
